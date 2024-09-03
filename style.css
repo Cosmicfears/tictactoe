@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+* {
+	font-family: "Poppins", sans-serif;
+}
+
+body, html {
+	padding: 0px;
+	margin: 0px;
+}
+
+.game-canvas {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game-canvas .flex-box {
+	width: calc(calc(100px * 3) + calc(2px * 3));
+	height: calc(calc(100px * 3) + calc(2px * 3));
+	border: 1px solid #d4d4d4;
+	border-radius: 2px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.game-canvas .flex-box .box-game {
+	width: 100px;
+	height: 100px;
+	border-radius: 2px;
+	border: inherit;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.game-canvas .game-score {
+	width: 100%;
+	height: 80px;
+	display: flex;
+	align-items: center;
+}
+.game-canvas .game-score .player {
+	width: calc(100% / 2);
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.game-canvas .game-score .player b {
+	margin-left: 9px;
+}
+.game-canvas .control-btn {
+	align-items: center;
+	justify-content: center;
+	padding: 10px 0px;
+	display: none;
+}
+.game-canvas .control-btn[open-winner] {
+	display: flex;
+}
+.game-canvas .control-btn button {
+	background-color: #c0cfff;
+	padding: 3px 14px;
+	border-radius: 4px;
+	color: inherit;
+	transition: .3s;
+	border: none;
+	cursor: pointer;
+}
+.game-canvas .control-btn button:hover {
+	background-color: #285aff;
+	color: white;
+}
+
+.information-box {
+	position: fixed;
+	top: 0; left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.2);
+	z-index: 4;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+.information-box .box-center {
+	background: white;
+	padding: 12px 12px;
+	border-radius: 9px;
+}
+.information-box .box-center h3 {
+	margin: 0px;
+}
+.information-box .box-center p {
+	font-size: 0.9rem;
+	margin: 8px 0px;
+}
+.information-box .box-center .btn-list {
+	display: flex;
+	align-items: center;
+}
+.information-box .box-center .btn-list button {
+	background-color: #c0cfff;
+	padding: 3px 14px;
+	border-radius: 4px;
+	color: inherit;
+	transition: .3s;
+	border: none;
+	cursor: pointer;
+	margin-right: 2px;
+}
+.information-box .box-center .btn-list button:hover {
+	background-color: #285aff;
+	color: white;
+}
